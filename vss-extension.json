@@ -1,0 +1,36 @@
+{
+  "manifestVersion": 1,
+  "id": "GetLastPullRequestID",
+  "name": "Get Last Pull Request ID",
+  "version": "0.1.30",
+  "publisher": "SenseiJoe",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "A task that retrieves the last pull request in master branch",
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "icons": {
+    "default": "GetLastPullRequestID/icon.png"
+  },
+  "files": [
+    {
+      "path": "GetLastPullRequestID"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "GetLastPullRequestID",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+          "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+          "name": "GetLastPullRequestID"
+      }  
+    }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "be2e8770-e4c6-11eb-b4dc-75f084158384",
+  "name": "GetLastPullRequestID",
+  "friendlyName": "GetLastPullRequestID",
+  "description": "Get Last Pull Request ID from master branch",
+  "author": "Joe Sherwood",
+  "helpMarkDown": "Retrieves the last Pull Request ID from master branch",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "30"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "GetLastPullRequestID $(message)",
+  "inputs": [
+    {
+      "name": "AccessToken",
+      "type": "String",
+      "label": "AccessToken",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Personal Access Token to be used if OAuth is not checked off."
+    }
+  ],
+  "execution": {
+    "PowerShell3": {
+      "target": "Get-LastPullRequestID.ps1"
+    }
+  }
+}
